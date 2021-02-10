@@ -27,22 +27,16 @@
   top: calc((0 * 100vh) + var(--scroll-var));
 }
 
-.seccion.second {
-  background: linear-gradient(rgba(103, 198, 180, .85), rgba(103, 198, 180, .85)), url(https://i.pinimg.com/originals/ce/e4/c9/cee4c9b437ce8fe2dd4d276b21a6992b.jpg);
-  }
 
 .seccion.second .content {
   /* the second section so we need to remove the height of top section to have the same position so -100vh and we do the same for the other sections */
   top: calc((-1 * 100vh) + var(--scroll-var));
 }
 
-.seccion.third {
-  background: linear-gradient(rgba(187, 216, 100, .85), rgba(187, 216, 100, .85)), url(https://i.pinimg.com/originals/ce/e4/c9/cee4c9b437ce8fe2dd4d276b21a6992b.jpg);
-  }
 
 .seccion.third .content {
   top: calc((-2 * 100vh) + var(--scroll-var));
-  }
+}
 
 .content {
   position: absolute;
@@ -51,7 +45,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .copy {
