@@ -17,15 +17,21 @@
       <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar"
          style="padding-top: 10px;padding-bottom: 0px;">
          <div class="container-fluid">
-            <a class="navbar-brand logo" href="index.html">
+            <a class="navbar-brand logo">
                <div class="table-responsive table-borderless">
                   <table class="table table-bordered">
                      <tbody>
                         <tr>
-                           <td class="text-center logo" rowspan="2"><img src="assets/img/logof.jpeg"
-                              height="50px"></td>
-                           <td class="text-center emblema" rowspan="2"><img src="assets/img/slogan_b.png"
-                              height="50px"></td>
+                           <td class="text-center logo" rowspan="2">
+                              <a href="index.html">
+                                 <img src="assets/img/logof.jpeg" height="50px">
+                              </a>
+                           </td>
+                           <td class="text-center emblema" rowspan="2">
+                              <a href="services.html">
+                                 <img src="assets/img/slogan_b.png" height="50px">
+                              </a>
+                           </td>
                         </tr>
                      </tbody>
                   </table>
@@ -43,22 +49,81 @@
          </div>
       </nav>
       <main class="page landing-page">
-         <section class="text-center clean-block clean-hero" id="portada">
-            <div class="text">
-               <p class="portada" style="font-family: Montserrat, sans-serif;"><em>SA Mecánica Express Servicio Automotrizes un Taller Multimarcas
-                  en brindar servicios de mantenimiento de mecánica ligera.
-                  </em><br><br><em>Con una propuesta innovadora de calidad, transparencia en el servicio, trato personalizado y recios razonables
-                  busca posicionarse como el mejor Taller de Mecánica Express en la ciudad de Quito.</em><br><br><em>¡Muchas gracias por preferirnos!</em><br>
-               </p>
-               <a class="btn btn-primary btn-lg portada" role="button" href="services.html"
-                  style="font-family: Ubuntu, sans-serif;">¡Conozca nuestros servicios!</a>
+         <section class="first seccion">
+            <div class="content">
+               <a href="#second">
+                  <div class="scroll-down"></div>
+               </a>
+            </div>
+         </section>
+         <section class="second seccion" id="second">
+            <div class="content">
+               <div class="copy">
+                  <h2>Gracias por preferirnos...</h2>
+                  <p>
+                     SA Mecánica Express Servicio Automotriz es un Taller Multimarca especialista en brindar servicios de
+                     mantenimiento de mecánica ligera.
+                     <br>
+                     Con una propuesta innovadora de calidad, transparencia en el servicio, trato personalizado, y precios
+                     razonables busca posicionarse como uno de los mejores talleres de Mecánica Express en la ciudad de
+                     Quito.
+                  </p>
+                  <br>
+                  <div class="row ">
+                     <div class="col-md-6 col-lg-6 item">
+                        <img class="img-thumbnail img-fluid image"
+                           src="assets/img/galeria/WhatsApp%20Image%202020-12-05%20at%2013.22.02.jpeg">
+                     </div>
+                     <div class="col-md-6 col-lg-6 item">
+                        <img class="img-thumbnail img-fluid image"
+                           src="assets/img/galeria/WhatsApp%20Image%202020-12-05%20at%2013.22.02.jpeg">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="third seccion">
+            <div class="content">
+               <div class="copy">
+                  <h2>Pensando en su bienestar...</h2>
+                  <p>
+                     En SA Mecánica Express la infraestructura representa un elemento imprescindible para brindar servicios
+                     de calidad de forma integral.
+      
+                     Cuenta con instalaciones de más de 300 m2, con un diseño de ambientes confortables que permiten
+                     interactuar de forma efectiva con los clientes que esperan cómodamente la entrega de su vehículo sin la
+                     necesidad de movilizarse de nuestra empresa.
+                     (en cada imagen va a estar un video)
+                  </p>
+                  <br>
+                  <div class="row ">
+                     <div class="col-md-6 col-lg-6 item">
+                        <img class="img-thumbnail img-fluid image"
+                           src="assets/img/galeria/WhatsApp%20Image%202020-12-05%20at%2013.22.02.jpeg">
+                     </div>
+                     <div class="col-md-6 col-lg-6 item">
+                        <img class="img-thumbnail img-fluid image"
+                           src="assets/img/galeria/WhatsApp%20Image%202020-12-05%20at%2013.22.02.jpeg">
+                     </div>
+                  </div>
+                  <br><br>
+                  <a class="btn btn-primary btn-lg" role="button" href="services.html"
+                  style="font-family: Ubuntu, sans-serif;font-size: 25px;">¡Conozca nuestros servicios!</a>
+               </div>
             </div>
          </section>
       </main>
+      
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
       <script src="assets/js/smoothproducts.min.js"></script>
       <script src="assets/js/theme.js"></script>
+      <script>
+         window.onscroll = function () {
+             var scroll = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+             document.documentElement.style.setProperty('--scroll-var', scroll + "px");
+         }
+     </script>
    </body>
 </html>

@@ -1,16 +1,127 @@
 #portada {
-  color: rgba(17,18,18,0.54);
-  background-image: url(../../assets/img/principal.jpeg);
-  background-color: #fff;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+}
+
+:root {
+  --scroll-var: 0px
+}
+
+.seccion {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  position: relative; /*Mandatory for the overflow effect*/
+
+}
+
+.seccion.first {
+  background: url(https://i.pinimg.com/originals/ce/e4/c9/cee4c9b437ce8fe2dd4d276b21a6992b.jpg);
+}
+
+.seccion.first .content {
+  /* the first section so top start from 0*/
+  top: calc((0 * 100vh) + var(--scroll-var));
+}
+
+.seccion.second {
+  background: linear-gradient(rgba(103, 198, 180, .85), rgba(103, 198, 180, .85)), url(https://i.pinimg.com/originals/ce/e4/c9/cee4c9b437ce8fe2dd4d276b21a6992b.jpg);
+  }
+
+.seccion.second .content {
+  /* the second section so we need to remove the height of top section to have the same position so -100vh and we do the same for the other sections */
+  top: calc((-1 * 100vh) + var(--scroll-var));
+}
+
+.seccion.third {
+  background: linear-gradient(rgba(187, 216, 100, .85), rgba(187, 216, 100, .85)), url(https://i.pinimg.com/originals/ce/e4/c9/cee4c9b437ce8fe2dd4d276b21a6992b.jpg);
+  }
+
+.seccion.third .content {
+  top: calc((-2 * 100vh) + var(--scroll-var));
+  }
+
+.content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.copy {
+  color: #000;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  max-width: 60%;
+  margin: 0 8.125rem 1.875rem 8.125rem;
+}
+
+.portadaimg {
+  margin: 30px 0;
+}
+
+.imgservicio {
+  height: 7.8125rem;
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2.5px solid white;
+  position: absolute;
+  bottom: 10%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  border: 2.5px solid white;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+  top: 30%;
+  animation-delay: .2s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
 }
 
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 .sp-loading {
